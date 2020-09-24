@@ -1,0 +1,13 @@
+<% current_users_message = message.user == current_user  %>
+
+<div class="card mb-2 row col-sm-8" style='color: black; background:  <%= current_users_message ? "#DCF8C6; float: right; margin: 0 1rem" : "white; float: left; margin: 0 1rem" %>; border-radius: 10px' > 
+    <% if !current_users_message %>
+        <div class="ml-1">
+            <strong style="font-size: 50px; text-decoration: underline"><%= message.user.email %> says: </strong>
+        </div>
+    <% end %>
+    <div class="ml-3" style="font-size: 40px">
+        <%= message.message %>
+    </div>
+
+</div>          
