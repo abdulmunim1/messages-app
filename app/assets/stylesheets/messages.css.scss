@@ -1,0 +1,64 @@
+.messages_page{ 
+    height: 93vh;
+    overflow: hidden;
+    .header {
+        height: 8vh;
+        color: white;
+        background: teal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .h1{
+            display: inline;
+        }
+        .sign_out_button{
+            position: absolute;
+            right: 1rem;
+            color: red;
+            background: white;
+            font-weight: bold;
+        }
+    }
+    .message{
+        color: black;
+        border-radius: 10px;
+        .message_title{
+            font-size: 50px;
+            text-decoration: underline
+        }
+        .message_text{
+            font-size: 40px
+        }
+    }
+    .current_user_message{
+        background: #DCF8C6;
+        float: right;
+        margin: 0rem 1rem;
+    }
+    .other_user_message{
+        background:  white;
+        float: left; 
+        margin: 0rem 1rem;
+    }
+    #messages{
+        height: 81vh;
+        overflow: scroll;
+    }
+    .send_message_container{
+        position: absolute;
+        right: 1rem;
+    }
+    .send_message_inputs{
+        width: 100vw;
+    }
+    .send_message_text{
+        font-size: 40px;
+        height: 10vh;
+    }
+    .send_message_button{
+        background: teal;
+        height: 10vh;
+        font-size: 5vh;
+        font-weight: 900;
+    }
+}
