@@ -6,7 +6,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable
 
   has_many :messages
-  validates :name, uniqueness: true
+  validates :username, uniqueness: true, format: { with: /\A[a-zA-Z0-9]+\Z/ }
+  validates :name, presence: true
   validates :email, format: { with: /\A[^@\s]+@[^@\s]+\z/ , message: "Email invalid"  }
   validates :password, length: { minimum:6 }
   scope :valid_receivers, -> { where.not(token: nil)}

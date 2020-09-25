@@ -8,6 +8,10 @@
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: 'Email',required: true%>
         </div>
         <div class="field">
+            <%= f.label :username %><br />
+            <%= f.text_field :username,class: 'form-control',required: true, placeholder: 'Username' %>
+        </div>
+        <div class="field">
             <%= f.label :name %><br />
             <%= f.text_field :name,class: 'form-control',required: true, placeholder: 'Name' %>
         </div>
