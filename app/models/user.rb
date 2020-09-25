@@ -12,4 +12,9 @@ class User < ApplicationRecord
   def self.get_registration_tokens_except user
     User.valid_receivers.where.not(id: user.id).pluck(:token)
   end
+
+  def save_token token
+    self.token =  token
+    save validate: false
+  end
 end
