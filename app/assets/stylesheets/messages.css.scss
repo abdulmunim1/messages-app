@@ -1,4 +1,4 @@
-.messages_page{ 
+.messages-page{ 
     height: 93vh;
     overflow: hidden;
     .header {
@@ -11,51 +11,57 @@
         .h1{
             display: inline;
         }
-        .sign_out_button{
+        .sign-out-button{
             position: absolute;
             right: 1rem;
             color: red;
+            size: 4rem 6rem;
             background: white;
             font-weight: bold;
+            font-size: x-large;
         }
     }
     .message{
         color: black;
         border-radius: 10px;
-        .message_title{
+        .message-title{
             font-size: 50px;
             text-decoration: underline
         }
-        .message_text{
-            font-size: 40px
+        .message-text{
+            font-size: 40px;
+            @media (min-width: 767px){
+                font-size: 16px !important;
+            }
         }
     }
-    .current_user_message{
+    .current-user-message{
         background: #DCF8C6;
         float: right;
         margin: 0rem 1rem;
     }
-    .other_user_message{
+    .other-user-message{
         background:  white;
         float: left; 
         margin: 0rem 1rem;
     }
     #messages{
         height: 81vh;
-        overflow: scroll;
+        overflow-y: scroll;
     }
-    .send_message_container{
+    .send-message-container{
         position: absolute;
         right: 1rem;
+        margin-bottom: 0;
     }
-    .send_message_inputs{
+    .send-message-inputs{
         width: 100vw;
     }
-    .send_message_text{
+    .send-message-text{
         font-size: 40px;
         height: 10vh;
     }
-    .send_message_button{
+    .send-message-button{
         background: teal;
         height: 10vh;
         font-size: 5vh;

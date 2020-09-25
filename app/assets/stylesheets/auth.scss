@@ -1,24 +1,31 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
 body {
-  background: rgb(250, 250, 250);
-  background-attachment: fixed;
+  background: #ECE5DD;
   margin: 0 !important;
   color: #707070;
   font-family: "Open Sans";
   font-size: 16px;
 }
+.form-container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .auth-banner {
   width: 90%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto auto;
   padding: 20px;
   background-color: #fff;
   border: 1px solid #dbdbdb;
   color: rgba(0, 0, 0, 0.9);
   font-size: 16px;
   margin-top: 80px;
+  border-radius: 25px;
+  vertical-align: middle;
+  .button{
+    background: teal;
+  }
 }
 
 .alert {

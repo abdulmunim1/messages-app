@@ -1,8 +1,8 @@
-<div class="messages_page" >
+<div class="messages-page" >
     <div >
         <div class="header">
             <p class="h1 text-center">Messages</p>
-            <%= link_to "Logout", destroy_user_session_path, method: :delete,class: " sign_out_button btn" %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete,class: " sign-out-button btn" %>
         </div>
             <div id="messages" class="">
                 <%= render @messages %>
@@ -10,14 +10,14 @@
 
     </div>
 
-    <div class="send_message_container form-group text-right">
+    <div class="send-message-container form-group text-right">
         <%= form_for @message, remote: true do |f| %>
-            <div class="send_message_inputs row">
+            <div class="send-message-inputs row">
                 <div class="col-sm-10">
-                    <%= f.text_area :message ,class: "send_message_text form-control",required: true %>
+                    <%= f.text_area :message ,class: "send-message-text form-control",required: true %>
                 </div>
                 <div class="col-sm-2">                
-                    <%= f.submit ">", class: "send_message_button form-control  btn btn-primary"%>        
+                    <%= f.submit ">", class: "send-message-button form-control  btn btn-primary"%>        
                 </div>
             </div>
         <% end %>
