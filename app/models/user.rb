@@ -3,10 +3,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   validates_presence_of :name, :email, :password
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable
 
   has_many :messages
-
+  validates :name, uniqueness: true
+  validates :email, format: { with: /\A[^@\s]+@[^@\s]+\z/ , message: "Email invalid"  }
+  validates :password, length: { minimum:6 }
   scope :valid_receivers, -> { where.not(token: nil)}
 
   def self.get_registration_tokens_except user
