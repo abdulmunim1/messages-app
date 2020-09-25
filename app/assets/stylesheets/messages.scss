@@ -1,0 +1,108 @@
+.messages-page {
+  height: 93vh;
+  overflow: hidden;
+  .header {
+    color: white;
+    background: teal;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+    padding: 10px;
+    .h1 {
+      display: inline;
+    }
+    .sign-out-button {
+      position: absolute;
+      right: 1rem;
+      color: red;
+      background: white;
+      font-weight: bold;
+    }
+  }
+  .message {
+    color: black;
+    border-radius: 10px;
+    .message-title {
+      font-size: 20px;
+      text-decoration: underline;
+    }
+    .message-text {
+      font-size: 15px;
+      word-break: break-word;
+    }
+  }
+  .current-user-message {
+    background: #dcf8c6;
+    float: right;
+    margin: 0rem 1rem;
+    padding: 5px 10px;
+  }
+  .other-user-message {
+    background: white;
+    float: left;
+    margin: 0rem 1rem;
+    padding: 5px 10px;
+  }
+  #messages {
+    height: 81vh;
+    overflow-y: scroll;
+  }
+  .send-message-container {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    .new_message {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .send-message-inputs {
+    width: 100vw;
+  }
+  .send-message-text {
+    font-size: 18px;
+    box-shadow: unset;
+    height: 45px;
+    resize: unset;
+    border-radius: 5px 0 0 5px;
+  }
+  .send-message-button {
+    background: teal;
+    height: 45px;
+    width: 100px;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .messages-page {
+    .current-user-message {
+      width: 80%;
+      margin: 0 10px 10px 0;
+    }
+    .other-user-message {
+      width: 80%;
+      margin: 0 0 0 10px;
+    }
+    .send-message-inputs {
+      align-items: center;
+      width: 100vw;
+    }
+    .send-message-text {
+      font-size: 14px;
+    }
+    .send-message-button {
+      font-size: 16px;
+    }
+    .message {
+      .message-title {
+        font-size: 16px;
+      }
+      .message-text {
+        font-size: 14px;
+      }
+    }
+  }
+}
