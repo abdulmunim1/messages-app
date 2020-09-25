@@ -1,0 +1,84 @@
+.messages-page{ 
+    height: 93vh;
+    overflow: hidden;
+    .header {
+        height: 8vh;
+        color: white;
+        background: teal;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        align-items: center;
+        .h1{
+            display: inline;
+        }
+        .sign-out-button{
+            position: absolute;
+            right: 1rem;
+            color: red;
+            size: 4rem 6rem;
+            background: white;
+            font-weight: bold;
+            font-size: x-large;
+        }
+    }
+    .message{
+        color: black;
+        border-radius: 10px;
+        .message-title{
+            font-size: 30px;
+            text-decoration: underline;
+        }
+        .message-text{
+            font-size: 25px;
+            word-break: break-word;
+        }
+    }
+    .current-user-message{
+        background: #DCF8C6;
+        float: right;
+        margin: 0rem 1rem;
+    }
+    .other-user-message{
+        background:  white;
+        float: left; 
+        margin: 0rem 1rem;
+    }
+    #messages{
+        height: 81vh;
+        overflow-y: scroll;
+    }
+    .send-message-container{
+        position: absolute;
+        right: 1rem;
+        margin-bottom: 0;
+    }
+    .send-message-inputs{
+        width: 100vw;
+    }
+    .send-message-text{
+        font-size: 40px;
+        height: 10vh;
+    }
+    .send-message-button{
+        background: teal;
+        height: 10vh;
+        font-size: 5vh;
+        font-weight: 900;
+    }
+}
+
+
+@media  (max-width: 767px) {
+    .messages-page {
+        .message{
+            .message-title{
+                font-size: 50px;
+            }
+            .message-text{
+                font-size: 40px;
+            }
+        }
+
+    }
+}
