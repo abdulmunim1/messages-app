@@ -15,13 +15,13 @@ consumer.subscriptions.create("ChatChannel", {
     let html;
     if (user_id === data.message.user_id) {
       html = data.mine;
+      const TextContainer = document.getElementById("send-message-text");
+      TextContainer.value = "";
     } else {
       html = data.theirs;
     }
     const messagesContainer = document.getElementById("messages");
     messagesContainer.innerHTML = messagesContainer.innerHTML + html;
-    const TextContainer = document.getElementById("send-message-text");
-    TextContainer.value = "";
     messagesContainer.scrollTo(0, messagesContainer.scrollHeight);
   },
 
