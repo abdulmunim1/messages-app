@@ -10,8 +10,10 @@ class MessagesController < ApplicationController
   end
 
   def create 
-    current_user.messages.create!(message_params)
-    redirect_to root_path    
+    @message = Message.new(message_params)
+    @message.user = current_user
+    @message.save
+    SendMessageJob.perform_later(@message)
   end
 
   private

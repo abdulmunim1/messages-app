@@ -1,12 +1,9 @@
 <% current_users_message = message.user == current_user  %>
-
-
-<div class="card mb-2 row col-lg-7 col-sm-8 message <%= current_users_message ? "current-user-message" : "other-user-message" %>"> 
-    <div class="ml-1">
+<div class="card mb-2 row col-lg-7 col-sm-8 message <%= current_users_message ? "current-user-message" : "other-user-message" %>">
+    <div>
         <strong class="message-title"><%= !current_users_message ? message.user.name : "You" %></strong>
     </div>
-    <div class="ml-3 message-text" >
+    <div class="message-text">
         <%= message.message %>
     </div>
-
-</div>          
+</div>

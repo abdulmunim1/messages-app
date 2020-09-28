@@ -1,18 +1,16 @@
 <div class="messages-page">
-    <div>
-        <div class="header">
-            <p class="h3 text-center">Messages</p>
-            <%= link_to "Logout", destroy_user_session_path, method: :delete,class: " sign-out-button btn" %>
-        </div>
-        <div id="messages" class="">
-            <%= render @messages %>
-        </div>
-
+    <div id="user-id" data-user-id="<%= current_user.id  %>"></div>
+    <div class="header">
+        <p class="h3 text-center">Messages</p>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete,class: " sign-out-button btn" %>
+    </div>
+    <div id="messages" class="">
+        <%= render @messages %>
     </div>
 
     <div class="send-message-container">
         <%= form_for @message, remote: true do |f| %>
-        <%= f.text_area :message ,class: "send-message-text form-control",required: true %>
+        <%= f.text_area :message ,class: "send-message-text form-control", id:"send-message-text",required: true %>
         <%= f.submit "push", class: "send-message-button form-control  btn btn-primary"%>
         <% end %>
     </div>
